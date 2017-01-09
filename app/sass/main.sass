@@ -4,42 +4,113 @@
 @import "vars"
 
 *::-webkit-input-placeholder
-	color: #666
-	opacity: 1
+  color: #666
+  opacity: 1
 
 *:-moz-placeholder
-	color: #666
-	opacity: 1
+  color: #666
+  opacity: 1
 
 *::-moz-placeholder
-	color: #666
-	opacity: 1
+  color: #666
+  opacity: 1
 
 *:-ms-input-placeholder
-	color: #666
-	opacity: 1
+  color: #666
+  opacity: 1
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: #666
+  color: #666
 body input:required:valid,
 body textarea:required:valid
-	color: #666
+  color: #666
 
 html, body
-	height: 100%
+  height: 100%
 
 body
-	font-size: 16px
-	min-width: 320px
-	position: relative
-	line-height: 1.75
-	font-family: $default-font
-	overflow-x: hidden
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.75
+  font-family: $default-font
+  overflow-x: hidden
 
 .img-responsive
-	display: block
-	max-width: 100%
-	height: auto
+  display: block
+  max-width: 100%
+  height: auto
+
+.left
+  text-align: left
+
+.center
+  text-align: center
+
+.right
+  text-align: right
+
+ul 
+  list-style: none
+  margin: 0
+  padding: 0
+
+a:hover
+  text-decoration: none
+  cursor: pointer
+
+// Footer
+
+footer.footer
+  padding: 35px 0
+  color: #666666
+  .footer__top
+    padding: 50px 0
+    .footer__top_item
+      img
+        height: 64px
+        width: 64px
+      h5
+        color: #000000
+        font-family: $black-font
+        font-size: 20px
+        margin-top: 20px
+        margin-bottom: 30px
+        padding: 0
+      .item_descr
+        span.phone
+          color: #232323
+          font-family: $black-font
+          font-size: 24px
+          font-weight: 400
+          line-height: 34px
+        span.address
+          color: #666666
+          font-size: 14px
+          font-weight: 400
+          line-height: 30px
+        span.link
+          a
+            color: #e31d3b
+            font-size: 14px
+            font-weight: 400
+            line-height: 30px
+  .footer__bottom
+    border-top: 1px solid #e6e6e6 
+    border-bottom: 1px solid #e6e6e6
+    padding: 30px 0
+    font-size: 13px
+    font-weight: 400
+    line-height: 24px
+    color: #999999
+    ul.list_link li 
+      display: inline-block
+      padding-right: 25px
+      &:last-child
+        padding-right: 0
+      a
+        color: #e31d3b
+      
 
 @import "media" // Всегда в конце
