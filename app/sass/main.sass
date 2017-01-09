@@ -60,6 +60,58 @@ a:hover
   text-decoration: none
   cursor: pointer
 
+section
+  h1
+    color: #ffffff
+    font-family: $black-font
+    font-size: 40px
+    font-weight: 700
+    line-height: 60px
+    text-transform: uppercase
+    margin-bottom: 0
+  p
+    color: #cccccc
+    font-size: 17px
+    font-weight: 400
+    line-height: 28px
+    padding: 35px 0
+
+a.btn
+  background-color: #222
+  border: 2px solid #e31d3b
+  border-radius: 25px
+  color: #ffffff
+  font-family: $heavy-font
+  font-size: 11px
+  font-weight: 700
+  line-height: 24px
+  padding: 15px 45px
+  text-transform: uppercase
+  &:hover
+    background-color: #e31d3b
+    border: 2px solid transparent
+   
+
+// About block
+
+.about
+  color: #fff
+  .container
+    background-color: #222
+    .about__block
+      margin: 50px 0
+
+// Our services
+
+.our__services
+  color: #fff
+  .container
+    background-color: #222222
+    .our__services__description
+      margin: 50px
+
+
+
 // Footer
 
 footer.footer
@@ -111,6 +163,17 @@ footer.footer
         padding-right: 0
       a
         color: #e31d3b
-      
+        img
+          width: 24px
+    ul.list_social_link li
+      display: inline-block
+      padding-right: 10px
+      &:last-child
+        padding-right: 0
+      a
+        &:hover
+          opacity: .7
+        img
+          width: 24px
 
 @import "media" // Всегда в конце
