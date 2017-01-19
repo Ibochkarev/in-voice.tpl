@@ -93,6 +93,9 @@ a.btn
   line-height: 24px
   padding: 15px 45px
   text-transform: uppercase
+  -webkit-transition: all .2s
+  -moz-transition: all .2s
+  transition: all .2s
   &:hover
     background-color: #e31d3b
     border: 2px solid transparent
@@ -102,7 +105,7 @@ a.btn
 
 .about
   color: #fff
-  .container
+  .container-fluid
     background-color: #222
     .about__block
       margin: 50px 0
@@ -110,7 +113,7 @@ a.btn
 // Our services
 
 .our__services
-  .container
+  .container-fluid
     background-color: #f0f0f0
     .our__services__description
       margin: 50px
@@ -127,7 +130,7 @@ a.btn
       display: flex
       flex-wrap: wrap
       list-style: none
-      margin: 0
+      margin: 0 0 25px 0
       padding: 0
       .item__services
         display: flex
@@ -189,20 +192,21 @@ a.btn
       padding-bottom: 10px
     .prices
       font-size: 16px
+      font-family: $black-font
       font-weight: 400
       line-height: 24px
       padding-bottom: 20px
       span.price
-        color: #be926f
+        color: #e31d3b
       span.old_price
+        margin-left: 10px
         color: #999999
         text-decoration: line-through
-     
 
 // Footer
 
 footer.footer
-  padding: 35px 0
+  padding: 35px 0 0 0
   color: #666666
   .footer__top
     padding: 50px 0
@@ -219,7 +223,7 @@ footer.footer
         padding: 0
       .item_descr
         span.phone
-          color: #232323
+          color: #666
           font-family: $black-font
           font-size: 24px
           font-weight: 400
@@ -231,10 +235,12 @@ footer.footer
           line-height: 30px
         span.link
           a
-            color: #e31d3b
+            color: #666
             font-size: 14px
             font-weight: 400
             line-height: 30px
+            &:hover
+              color: #e31d3b
   .footer__bottom
     border-top: 1px solid #e6e6e6 
     border-bottom: 1px solid #e6e6e6
@@ -249,7 +255,9 @@ footer.footer
       &:last-child
         padding-right: 0
       a
-        color: #e31d3b
+        color: #666
+        &:hover
+          color: #e31d3b
         img
           width: 24px
     ul.list_social_link li
