@@ -32,10 +32,14 @@ html, body
 body
   font-size: 16px
   min-width: 320px
+  color: #666666
   position: relative
   line-height: 1.75
   font-family: $default-font
   overflow-x: hidden
+  -webkit-text-size-adjust: 100%
+  -webkit-overflow-scrolling: touch
+  -webkit-font-smoothing: antialiased !important
 
 .img-responsive
   display: block
@@ -67,20 +71,23 @@ section
     font-size: 40px
     font-weight: 700
     line-height: 60px
-    text-transform: uppercase
     margin-bottom: 0
+    text-transform: capitalize
     &.title-section
-      color: #232323
+      color: #7E868F
       text-align: center
-      font-size: 18px
-      text-transform: uppercase
+  p.sub-title
+    margin: 0
+    line-height: 25px
+    color: #666666
 
-  p
-    color: #cccccc
-    font-size: 17px
-    font-weight: 400
-    line-height: 28px
-    padding: 35px 0
+.section-padding
+  padding: 100px 0
+
+p
+  font-weight: 400
+  line-height: 28px
+  padding: 35px 0
 
 a.btn
   background-color: #222
@@ -99,7 +106,11 @@ a.btn
   &:hover
     background-color: #e31d3b
     border: 2px solid transparent
-   
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto   
 
 // About block
 
@@ -118,7 +129,7 @@ a.btn
     .our__services__description
       margin: 50px
       h1, p
-        color: #222
+        color: #7E868F
       a.btn
         color: #fff
         background-color: rgb(227, 29, 59)
@@ -129,12 +140,12 @@ a.btn
     .services__wrap
       display: flex
       flex-wrap: wrap
-      list-style: none
       margin: 0 0 25px 0
       padding: 0
       .item__services
         display: flex
         padding: 1rem
+        text-align: center
         @media(min-width: 40rem)
           width: 50%
         @media(min-width: 56rem)
@@ -147,10 +158,14 @@ a.btn
           flex-direction: column
           overflow: hidden
           min-width: 25%
+          -webkit-transition: all .2s
+          -moz-transition: all .2s
+          transition: all .2s
           img
             max-width: 100%
             height: auto
           h3
+            color: #7E868F
             font-size: 14px
             font-family: "latoheavy", sans-serif
             margin: 5px 0 0 0
@@ -161,12 +176,99 @@ a.btn
             font-family: "latolight", sans-serif
             font-size: 14px
             line-height: 1.4
-            padding: 1rem
+            padding: 2rem
             margin-top: 0
-            color: #999
           &:hover
             .card__image
               opacity: .8
+
+
+// Projects home
+
+section.portfolio-section
+  .container-fluid
+    background-color: #222
+  .portfolio-container
+    margin-top: 50px
+    ul#filter
+      margin-bottom: 50px
+      padding-left: 0
+      margin-left: -5px
+      list-style: none
+      li
+        font-size: 16px
+        line-height: 25px
+        border-radius: 20px
+        cursor: pointer
+        display: inline-block
+        padding-right: 15px
+        padding-left: 15px
+      li.active
+        background-color: #ff2a40
+        color: #fff
+    #portfolio-grid
+      position: relative
+      height: 550px
+      transition: height 250ms ease-out
+      overflow: hidden
+      li img
+        width: 100%
+      .portfolio-item
+        position: absolute
+        top: 0px
+        left: 0px
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
+        opacity: 1
+        transition: transform 250ms ease-out, opacity 250ms ease-out
+        .portfolio
+          position: relative
+          overflow: hidden
+          &:hover
+            opacity: 1
+            visibility: visible
+        .portfolio .tt-overlay
+          background-color: rgba(255, 42, 64, 0.9)
+          position: absolute;
+          width: 100%
+          height: 100%
+          opacity: 0
+          visibility: hidden
+          -webkit-transition: opacity 0.2s ease-out
+          -moz-transition: opacity 0.2s ease-out
+          -o-transition: opacity 0.2s ease-out
+          transition: opacity 0.2s ease-out
+          .portfolio-info 
+            .project-title
+              top: 60%
+              -webkit-transition: 0.3s
+              -moz-transition: 0.3s
+              -o-transition: 0.3s
+              transition: 0.3s
+            .links
+              top: 90%
+              -webkit-transition: 0.4s
+              -moz-transition: 0.4s
+              -o-transition: 0.4s
+              transition: 0.4s
+              a.btn
+                background-color: transparent
+                border-color: #fff
+                padding: 12px 22px
+                border-radius: 20px
+            .project-title, .links
+                position: absolute
+                left: 0
+                color: #fff
+                width: 100%
+                opacity: 0
+                visibility: hidden
+    ul#portfolio-grid.five-column>li 
+      width: 20%
+      float: left
+      display: block
+      height: auto
+
+  
 
 
 // Featured products
@@ -208,6 +310,7 @@ a.btn
 footer.footer
   padding: 35px 0 0 0
   color: #666666
+  background-color: #f0f0f0
   .footer__top
     padding: 50px 0
     .footer__top_item
@@ -215,11 +318,10 @@ footer.footer
         height: 64px
         width: 64px
       h5
-        color: #000000
+        color: #7E868F
         font-family: $black-font
         font-size: 20px
-        margin-top: 20px
-        margin-bottom: 30px
+        margin: 10px 0
         padding: 0
       .item_descr
         span.phone
@@ -248,7 +350,7 @@ footer.footer
     font-size: 13px
     font-weight: 400
     line-height: 24px
-    color: #999999
+    color: #666
     ul.list_link li 
       display: inline-block
       padding-right: 25px
