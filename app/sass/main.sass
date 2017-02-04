@@ -189,88 +189,70 @@ section.portfolio-section
   .container-fluid
     background-color: #222
   .portfolio-container
-    margin-top: 50px
-    ul#filter
-      margin-bottom: 50px
-      padding-left: 0
-      margin-left: -5px
-      list-style: none
-      li
-        font-size: 16px
-        line-height: 25px
-        border-radius: 20px
-        cursor: pointer
-        display: inline-block
-        padding-right: 15px
-        padding-left: 15px
-      li.active
-        background-color: #ff2a40
-        color: #fff
+    margin-top: 20px
+    .controls
+      button
+        border: 2px solid #4f5362
+        background-color: transparent
+        color: #000
+        letter-spacing: 2px
+        font-size: .75em
+        padding: 3px 25px
     #portfolio-grid
-      position: relative
-      height: 550px
-      transition: height 250ms ease-out
-      overflow: hidden
-      li img
-        width: 100%
+      margin-top: 50px
+      min-height: 400px
+      .mix
+        width: 20%
       .portfolio-item
-        position: absolute
-        top: 0px
-        left: 0px
-        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
-        opacity: 1
-        transition: transform 250ms ease-out, opacity 250ms ease-out
+        float: left
+        position: relative
+        top: 0
+        left: 0
+        overflow: hidden
+        margin-bottom: 0
         .portfolio
           position: relative
-          overflow: hidden
-          &:hover
-            opacity: 1
-            visibility: visible
-        .portfolio .tt-overlay
-          background-color: rgba(255, 42, 64, 0.9)
-          position: absolute;
-          width: 100%
-          height: 100%
-          opacity: 0
-          visibility: hidden
-          -webkit-transition: opacity 0.2s ease-out
-          -moz-transition: opacity 0.2s ease-out
-          -o-transition: opacity 0.2s ease-out
-          transition: opacity 0.2s ease-out
-          .portfolio-info 
-            .project-title
-              top: 60%
-              -webkit-transition: 0.3s
-              -moz-transition: 0.3s
-              -o-transition: 0.3s
-              transition: 0.3s
+          margin: 0
+          img
+            width: 100%
+          .portfolio-info
+            background-color: rgba(255, 42, 64, 0.9)
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: -1px
+            text-align: center
+            z-index: 10
+            opacity: 0
+            border: 1px solid transparent
+            -webkit-backface-visibility: hidden
+            -ms-backface-visibility: hidden
+            -o-backface-visibility: hidden
+            backface-visibility: hidden
+            -webkit-transition: all .3s
+            transition: all .3s
+            &:hover
+              opacity: 1
+            h3
+              color: #fff
+              padding-top: 40px
+              font-size: 20px
+              line-height: 25px
             .links
-              top: 90%
-              -webkit-transition: 0.4s
-              -moz-transition: 0.4s
-              -o-transition: 0.4s
-              transition: 0.4s
-              a.btn
+              .btn
                 background-color: transparent
                 border-color: #fff
                 padding: 12px 22px
                 border-radius: 20px
-            .project-title, .links
-                position: absolute
-                left: 0
-                color: #fff
-                width: 100%
-                opacity: 0
-                visibility: hidden
-    ul#portfolio-grid.five-column>li 
-      width: 20%
-      float: left
-      display: block
-      height: auto
-
-  
-
-
+                transition: all 0.4s ease
+                &:hover
+                  background-color: #fff
+                  border-color: #fff
+                  color: #ff2a40
+      
 // Featured products
 .featured__products
   margin: 50px 0
