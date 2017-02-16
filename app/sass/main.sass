@@ -26,6 +26,9 @@ body input:required:valid,
 body textarea:required:valid
   color: #666
 
+html
+  line-height: 1.4
+
 html, body
   height: 100%
 
@@ -33,6 +36,7 @@ body
   font-size: 16px
   min-width: 320px
   color: #666666
+  letter-spacing: .02em
   position: relative
   line-height: 1.75
   font-family: $default-font
@@ -75,20 +79,20 @@ h3
 
 section
   p.sub-title
-    margin: 0
-    line-height: 25px
-    color: #666666
+    font-size: 18px
+    line-height: 32px
+    color: #5a5a5a
 
 .section-padding
-  padding: 75px 0
+  padding: 85px 0 97px
 
 .section-title
   font-family: $heavy-font
-  font-size: 35px
-  line-height: 30px
   color: #ff2a40
-  margin-bottom: 25px
   text-transform: capitalize
+  margin: 0 0 39px
+  font-size: 42px
+  line-height: 64px
 
 p
   font-weight: 400
@@ -141,14 +145,89 @@ a.btn
 .sbox-gutter:nth-child(9)
   border-bottom: 0
 
+//  Header
+
+header
+  .head__top
+    padding: 20px 0 25px
+    .head__logo-link
+      float: left
+      .head__logo
+        width: 230px
+        height: 74px
+    .head__contacts
+      float: right
+      font-size: 14px
+      .head__contacts-item
+        float: left
+        margin: 0 0 0 100px
+        &:first-child
+          margin: 0
+        .head__contacts-row
+          margin: 4px 0 0
+          &:first-child
+            margin: 0
+        .head__contacts-row._type_link
+          font-size: 15px
+          .link
+            color: #02a8f3
+            transition: .3s color
+          .link._style_dashed
+            text-decoration: none
+            border-bottom: 1px dashed #02a8f3
+      .head__contacts-row
+        margin: 1px 0 0
+      .head__contacts-row._type_phone
+        margin-top: -1px
+        font-size: 18px
+      .head__contacts-link
+        color: #5a5a5a
+        font-family: $black-font
+        text-decoration: none      
+  .head__bottom
+    line-height: 60px
+    .nav#hmenu
+      ul.main__menu
+        .menu__item
+          display: inline-block
+          padding: 0 22px
+          &:first-child
+            padding: 0 22px 0 0  
+          .menu__link
+            font-size: 17px
+            color: #5a5a5a
+            text-decoration: none
+            -webkit-transition: .3s color
+            transition: .3s color
+            &:hover
+              color: #ff2a40
+    .call__order
+      float: right 
+      a.b__call
+        margin: 9px 0 0
+        padding: 10px 40px
+        -webkit-transition: .3s background,.3s color
+        transition: .3s background,.3s color
+        border-radius: 25px
+        border: 1px solid #ff2a40
+        color: #ff2a40
+        text-decoration: none
+        font-size: 15px
+        text-align: center
+        font-weight: 300
+        &:hover
+          background: #ff2a40
+          color: #fff
+
 // About block
 
 #about
   color: #fff
+  margin-top: -75px
   .container-fluid
     background-color: #2c3e50
     .about__block
-      padding: 60px 110px 60px 40px
+      padding: 60px 40px
     .section-title
       color: #fff
     .btn
@@ -163,19 +242,27 @@ a.btn
 #services
   .row-content
     margin-top: 80px
-    .service-box
-      padding: 30px 15px
-      h3
-        color: #999
-        font-weight: 700
-        text-transform: capitalize
-        margin-bottom: 20px
-        height: 60px
-      p
-        line-height: 22px
-        margin: 0 0 10px
+    .service__item
+      margin: 0
+      display: inline-block
+      padding: 15px
+      vertical-align: top
+      height: 400px
+      .home__service-icon
+        vertical-align: top
+        img
+          margin-top: 20px
+      .service__item-title
+        margin: 25px 0 20px
+        font-size: 19px
+        height: 75px
+        font-family: $heavy-font
+      .service__item-text
+        color: #5a5a5a
+        font-size: 16px
+        line-height: 29px
         padding: 0
-        min-height: 140px
+
 
 
 // Projects home
