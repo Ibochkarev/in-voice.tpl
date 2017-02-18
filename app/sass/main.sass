@@ -102,17 +102,20 @@ p
 a.btn
   background-color: #222
   border: 2px solid #e31d3b
-  border-radius: 25px
   color: #ffffff
   font-family: $heavy-font
-  font-size: 11px
-  font-weight: 700
   line-height: 24px
-  padding: 15px 45px
   text-transform: uppercase
-  -webkit-transition: all .2s
-  -moz-transition: all .2s
-  transition: all .2s
+  margin: 9px 0 0
+  padding: 10px 40px
+  -webkit-transition: .3s background,.3s color
+  transition: .3s background,.3s color
+  -webkit-border-radius: 25px
+  border-radius: 25px
+  text-decoration: none
+  font-size: 15px
+  text-align: center
+
   &:hover
     background-color: #e31d3b
     border: 2px solid transparent
@@ -144,6 +147,16 @@ a.btn
 .sbox-gutter:nth-child(8),
 .sbox-gutter:nth-child(9)
   border-bottom: 0
+
+.cf
+  &:before
+    content: " "
+    display: table
+  &:after
+    content: " "
+    display: table
+    clear: both
+  *zoom: 1
 
 //  Header
 
@@ -209,10 +222,9 @@ header
         -webkit-transition: .3s background,.3s color
         transition: .3s background,.3s color
         border-radius: 25px
-        border: 1px solid #ff2a40
+        border: 2px solid #ff2a40
         color: #ff2a40
         text-decoration: none
-        font-size: 15px
         text-align: center
         font-weight: 300
         &:hover
@@ -274,6 +286,7 @@ section.portfolio-section
     margin-top: 20px
     .controls
       button
+        font-family: $heavy-font
         border: 2px solid #ff2a40
         background-color: transparent
         color: #ff2a40
@@ -293,7 +306,7 @@ section.portfolio-section
       margin-top: 50px
       min-height: 400px
       .mix
-        width: 20%
+        width: 25%
       .portfolio-item
         float: left
         position: relative
@@ -329,10 +342,12 @@ section.portfolio-section
               opacity: 1
             h3
               color: #fff
-              padding-top: 40px
+              padding-top: 30%
               font-size: 20px
-              line-height: 25px
+              height: 75px
+              display: inline-block
             .links
+              margin-top: 20px
               .btn
                 background-color: transparent
                 border-color: #fff

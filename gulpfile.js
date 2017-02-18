@@ -86,9 +86,9 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'scripts'], function() {
 gulp.task('deploy', function() {
 
 	var conn = ftp.create({
-		host:      'hostname.com',
-		user:      'username',
-		password:  'userpassword',
+		host:      '***',
+		user:      '***',
+		password:  '***',
 		parallel:  10,
 		log: gutil.log
 	});
