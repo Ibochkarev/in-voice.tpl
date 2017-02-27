@@ -387,122 +387,203 @@
 
 	<section id="featured-products" class="featured-section section-padding center">
 		<div class="container">
+
 			<h2 class="section-title">Featured Products</h2>
+
 			<div class="row">
-				<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-					<div class="featured__products_item center">
-						<a href="#">
-							<img src="img/product/es-6.jpeg" alt="">
-							<div class="category-product">СЧ/НЧ драйверы</div>
-							<div class="title-product">CDT Audio  ES-03</div>
-							<div class="prices">
-								<span class="price">
-									12 990 р.
-								</span>
-							</div>
-						</a>
-					</div>
+
+				<div class="catalog product-container col-lg-3 col-md-3 col-sm-4 col-xs-6">
+				    <div class="product ms2_product" itemtype="http://schema.org/Product" itemscope>
+				        <meta itemprop="description" content="[[ +description:default=`[[ +pagetitle ]]` ]]">
+				        <meta itemprop="brand" content="{$_pls['vendor.name']}">
+				        <meta itemprop="name" content="{$pagetitle}">
+				        <link itemprop="url" href="{$id | url}" />
+				    
+				        <form method="post" class="ms2_form">
+
+				            {if $thumb?}
+				                <a href="{$id | url}" class="product-image"><img src="[[ +350x350 ]]" itemprop="image" alt="{$pagetitle}" title="{$pagetitle}"/></a>
+				            {else}
+				                <a href="{$id | url}" class="product-image"><img src="{'assets_url' | option}template/img/no-image.png"
+				                     srcset="{'assets_url' | option}template/img/no-image.png"
+				                     itemprop="image" alt="{$pagetitle}" title="{$pagetitle}" /></a>
+				            {/if}
+         
+				            <a href="{$id | url}" title="{$pagetitle}">
+				                <h2>{$pagetitle} <span>[[ #[[ +parent ]].pagetitle ]]</span></h2>
+				            </a>
+				            
+				            {if $new?}
+				                <div class="status" style="background: #62cc12">NEW</div>
+				            {/if}
+				            {if $popular?}
+				                <div class="status" style="background: #302f89">HIT</div>
+				            {/if}
+				            {if $favorite?}
+				                <div class="status" style="background: #ef0000">SALE</div>
+				            {/if}
+				            
+				            <div class="price">
+				                {$price} <span style="font-family:Arial;">&#8381;</span>
+				                {if $old_price?}
+				                    <del>{$old_price} <span style="font-family:Arial;">&#8381;</span></del>
+				                {/if}
+				            </div>
+				            <div class="available center">
+				                <button class="btn-tocart" type="submit" name="ms2_action" value="cart/add">В корзину</button>
+				            </div>
+
+				            <input type="hidden" name="id" value="{$id}">
+				            <input type="hidden" name="count" value="1">
+				            <input type="hidden" name="options" value="[]">
+				        </form>
+				    </div>
 				</div>
-				<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-					<div class="featured__products_item center">
-						<a href="#">
-							<img src="img/product/es-05.jpeg" alt="">
-							<div class="category-product">СЧ/НЧ драйверы</div>
-							<div class="title-product">CDT Audio  ES-05</div>
-							<div class="prices">
-								<span class="price">
-									12 990 р.
-								</span>
-								<span class="old_price">16 999 p.</span>
-							</div>
-						</a>
-					</div>
+
+				<div class="catalog product-container col-lg-3 col-md-3 col-sm-4 col-xs-6">
+				    <div class="product ms2_product" itemtype="http://schema.org/Product" itemscope>
+				        <meta itemprop="description" content="[[ +description:default=`[[ +pagetitle ]]` ]]">
+				        <meta itemprop="brand" content="{$_pls['vendor.name']}">
+				        <meta itemprop="name" content="{$pagetitle}">
+				        <link itemprop="url" href="{$id | url}" />
+				    
+				        <form method="post" class="ms2_form">
+
+				            {if $thumb?}
+				                <a href="{$id | url}" class="product-image"><img src="[[ +350x350 ]]" itemprop="image" alt="{$pagetitle}" title="{$pagetitle}"/></a>
+				            {else}
+				                <a href="{$id | url}" class="product-image"><img src="{'assets_url' | option}template/img/no-image.png"
+				                     srcset="{'assets_url' | option}template/img/no-image.png"
+				                     itemprop="image" alt="{$pagetitle}" title="{$pagetitle}" /></a>
+				            {/if}
+         
+				            <a href="{$id | url}" title="{$pagetitle}">
+				                <h2>{$pagetitle} <span>[[ #[[ +parent ]].pagetitle ]]</span></h2>
+				            </a>
+				            
+				            {if $new?}
+				                <div class="status" style="background: #62cc12">NEW</div>
+				            {/if}
+				            {if $popular?}
+				                <div class="status" style="background: #302f89">HIT</div>
+				            {/if}
+				            {if $favorite?}
+				                <div class="status" style="background: #ef0000">SALE</div>
+				            {/if}
+				            
+				            <div class="price">
+				                {$price} <span style="font-family:Arial;">&#8381;</span>
+				                {if $old_price?}
+				                    <del>{$old_price} <span style="font-family:Arial;">&#8381;</span></del>
+				                {/if}
+				            </div>
+				            <div class="available center">
+				                <button class="btn-tocart" type="submit" name="ms2_action" value="cart/add">В корзину</button>
+				            </div>
+
+				            <input type="hidden" name="id" value="{$id}">
+				            <input type="hidden" name="count" value="1">
+				            <input type="hidden" name="options" value="[]">
+				        </form>
+				    </div>
 				</div>
-				<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-					<div class="featured__products_item center">
-						<a href="#">
-							<img src="img/product/es-6.jpeg" alt="">
-							<div class="category-product">СЧ/НЧ драйверы</div>
-							<div class="title-product">CDT Audio ES-4</div>
-							<div class="prices">
-								<span class="price">
-									12 990 р.
-								</span>
-							</div>
-						</a>
-					</div>
+
+				<div class="catalog product-container col-lg-3 col-md-3 col-sm-4 col-xs-6">
+				    <div class="product ms2_product" itemtype="http://schema.org/Product" itemscope>
+				        <meta itemprop="description" content="[[ +description:default=`[[ +pagetitle ]]` ]]">
+				        <meta itemprop="brand" content="{$_pls['vendor.name']}">
+				        <meta itemprop="name" content="{$pagetitle}">
+				        <link itemprop="url" href="{$id | url}" />
+				    
+				        <form method="post" class="ms2_form">
+
+				            {if $thumb?}
+				                <a href="{$id | url}" class="product-image"><img src="[[ +350x350 ]]" itemprop="image" alt="{$pagetitle}" title="{$pagetitle}"/></a>
+				            {else}
+				                <a href="{$id | url}" class="product-image"><img src="{'assets_url' | option}template/img/no-image.png"
+				                     srcset="{'assets_url' | option}template/img/no-image.png"
+				                     itemprop="image" alt="{$pagetitle}" title="{$pagetitle}" /></a>
+				            {/if}
+         
+				            <a href="{$id | url}" title="{$pagetitle}">
+				                <h2>{$pagetitle} <span>[[ #[[ +parent ]].pagetitle ]]</span></h2>
+				            </a>
+				            
+				            {if $new?}
+				                <div class="status" style="background: #62cc12">NEW</div>
+				            {/if}
+				            {if $popular?}
+				                <div class="status" style="background: #302f89">HIT</div>
+				            {/if}
+				            {if $favorite?}
+				                <div class="status" style="background: #ef0000">SALE</div>
+				            {/if}
+				            
+				            <div class="price">
+				                {$price} <span style="font-family:Arial;">&#8381;</span>
+				                {if $old_price?}
+				                    <del>{$old_price} <span style="font-family:Arial;">&#8381;</span></del>
+				                {/if}
+				            </div>
+				            <div class="available center">
+				                <button class="btn-tocart" type="submit" name="ms2_action" value="cart/add">В корзину</button>
+				            </div>
+
+				            <input type="hidden" name="id" value="{$id}">
+				            <input type="hidden" name="count" value="1">
+				            <input type="hidden" name="options" value="[]">
+				        </form>
+				    </div>
 				</div>
-				<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-					<div class="featured__products_item center">
-						<a href="#">
-							<img src="img/product/es-6.jpeg" alt="">
-							<div class="category-product">СЧ/НЧ драйверы</div>
-							<div class="title-product">CDT Audio ES-6</div>
-							<div class="prices">
-								<span class="price">
-									12 990 р.
-								</span>
-							</div>
-						</a>
-					</div>
+
+				<div class="catalog product-container col-lg-3 col-md-3 col-sm-4 col-xs-6">
+				    <div class="product ms2_product" itemtype="http://schema.org/Product" itemscope>
+				        <meta itemprop="description" content="[[ +description:default=`[[ +pagetitle ]]` ]]">
+				        <meta itemprop="brand" content="{$_pls['vendor.name']}">
+				        <meta itemprop="name" content="{$pagetitle}">
+				        <link itemprop="url" href="{$id | url}" />
+				    
+				        <form method="post" class="ms2_form">
+
+				            {if $thumb?}
+				                <a href="{$id | url}" class="product-image"><img src="[[ +350x350 ]]" itemprop="image" alt="{$pagetitle}" title="{$pagetitle}"/></a>
+				            {else}
+				                <a href="{$id | url}" class="product-image"><img src="{'assets_url' | option}template/img/no-image.png"
+				                     srcset="{'assets_url' | option}template/img/no-image.png"
+				                     itemprop="image" alt="{$pagetitle}" title="{$pagetitle}" /></a>
+				            {/if}
+         
+				            <a href="{$id | url}" title="{$pagetitle}">
+				                <h2>{$pagetitle} <span>[[ #[[ +parent ]].pagetitle ]]</span></h2>
+				            </a>
+				            
+				            {if $new?}
+				                <div class="status" style="background: #62cc12">NEW</div>
+				            {/if}
+				            {if $popular?}
+				                <div class="status" style="background: #302f89">HIT</div>
+				            {/if}
+				            {if $favorite?}
+				                <div class="status" style="background: #ef0000">SALE</div>
+				            {/if}
+				            
+				            <div class="price">
+				                {$price} <span style="font-family:Arial;">&#8381;</span>
+				                {if $old_price?}
+				                    <del>{$old_price} <span style="font-family:Arial;">&#8381;</span></del>
+				                {/if}
+				            </div>
+				            <div class="available center">
+				                <button class="btn-tocart" type="submit" name="ms2_action" value="cart/add">В корзину</button>
+				            </div>
+
+				            <input type="hidden" name="id" value="{$id}">
+				            <input type="hidden" name="count" value="1">
+				            <input type="hidden" name="options" value="[]">
+				        </form>
+				    </div>
 				</div>
-				<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-					<div class="featured__products_item center">
-						<a href="#">
-							<img src="img/product/es-6.jpeg" alt="">
-							<div class="category-product">СЧ/НЧ драйверы</div>
-							<div class="title-product">CDT Audio  ES-03</div>
-							<div class="prices">
-								<span class="price">
-									12 990 р.
-								</span>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-					<div class="featured__products_item center">
-						<a href="#">
-							<img src="img/product/es-05.jpeg" alt="">
-							<div class="category-product">СЧ/НЧ драйверы</div>
-							<div class="title-product">CDT Audio  ES-05</div>
-							<div class="prices">
-								<span class="price">
-									12 990 р.
-								</span>
-								<span class="old_price">16 999 p.</span>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-					<div class="featured__products_item center">
-						<a href="#">
-							<img src="img/product/es-6.jpeg" alt="">
-							<div class="category-product">СЧ/НЧ драйверы</div>
-							<div class="title-product">CDT Audio ES-4</div>
-							<div class="prices">
-								<span class="price">
-									12 990 р.
-								</span>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-					<div class="featured__products_item center">
-						<a href="#">
-							<img src="img/product/es-6.jpeg" alt="">
-							<div class="category-product">СЧ/НЧ драйверы</div>
-							<div class="title-product">CDT Audio ES-6</div>
-							<div class="prices">
-								<span class="price">
-									12 990 р.
-								</span>
-							</div>
-						</a>
-					</div>
-				</div>
+
 			</div>
 		</container>
 	</section>
